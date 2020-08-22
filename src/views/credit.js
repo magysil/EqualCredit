@@ -128,9 +128,9 @@ export default () => {
     validaRut: function (rutCompleto) {
       rutCompleto = rutCompleto.replace("‐", "-");
       if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) return false;
-      var tmp = rutCompleto.split("-");
-      var digv = tmp[1];
-      var rut = tmp[0];
+      let tmp = rutCompleto.split("-");
+      let digv = tmp[1];
+      let rut = tmp[0];
       if (digv == "K") digv = "k";
 
       return Fn.dv(rut) == digv;
