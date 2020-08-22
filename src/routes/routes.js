@@ -2,6 +2,7 @@ import Home from "../views/home.js";
 import About from "../views/about.js";
 import Credit from "../views/credit.js";
 import Contact from "../views/contact.js";
+import Approved from "../views/approvedCredit.js";
 import NotFound from "../views/404.js";
 
 const content = document.getElementById("root");
@@ -19,6 +20,8 @@ const router = (route) => {
       return content.appendChild(Credit());
     case "#/contact":
       return content.appendChild(Contact());
+    case "#/aproved":
+      return content.appendChild(Approved());
     default:
       return content.appendChild(NotFound());
   }
