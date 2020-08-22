@@ -3,9 +3,25 @@
 /* body {
     font-family: 'Barlow', sans-serif;
 } */
-body {
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 40px;
     overflow-x: hidden;
- }
+  }
+
+  footer {
+    background-color:#ab5999;
+    padding-top: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: white;
+  }
 
 #text-style {
   font-family: "Barlow", sans-serif;

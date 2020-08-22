@@ -13,23 +13,9 @@ export default () => {
   MÁS INNOVADOR DEL MERCADO, DONDE TODOS CUENTAN</p>
   </header>
 
-  <!-- <div class="container-fluid">
-    <div class="row">
-      <div class="relative-position">
-        <img class="img-responsive" src="img/home_image.jpeg" alt="" />
-        <div class="container absolute-text">
-          <div class="row">
-           
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
 
   <div class="container">
-        <div class="row">
+        <div class="row" style="margin:50px 0 50px 0;">
             <div class="col" id="text-style">
                 EqualCredit te permite acceder a créditos de manera igualitaria; evaluamos tus datos reales sin importar quién eres y de manera automática te indicaremos si puedes optar a este beneficio, el cual permitirá abrirte puertas a todo lo que deseas.
             </div>
@@ -44,20 +30,6 @@ export default () => {
     <a href="#/credit" class="btn btn-info button_class">Pide tu crédito</a>
     <div style="height: 200px;"></div>
   </div> 
-
-
-  <!-- <section id="gallery" class="row no-gutters">
-
-<div class="container-home-image" style="margin-top:100px; padding-bottom:50px;">
-      <div class="image-widescreen1">
-        <img src="img/home_image.jpeg" class="rounded mx-auto d-block"/>
-        <a href="#/credit" class="btn btn-info button_class">Pide tu crédito</a>
-      </div>
-  </div>
-
-
-    
-</section> -->
 
   
     `;

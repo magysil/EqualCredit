@@ -24,7 +24,7 @@ export default () => {
 <div class="col-md-4" style="margin:50px 0 20px 0;"><p class="testim-title">Testimonios Exitosos</p></div>
 </div>
 
-<div class="row">
+<div class="row" style="margin-bottom:100px;">
 
 <div class="col-sm">
         <div class="card">
