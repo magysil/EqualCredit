@@ -127,7 +127,7 @@ body {
       margin-bottom: 0;
     }
     
-    .btn {
+    .card-block>.btn {
       position: absolute;
       display: flex;
       align-items: center;
@@ -177,3 +177,5 @@ body {
     /* font-weight: 500;
     font-size: 15pt; */
   }
+
+ 
