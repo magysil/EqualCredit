@@ -94,6 +94,11 @@ export default () => {
   formValid.style.display = "none";
   let a = 0;
   let i = 0;
+  let maxAmount = 0;
+  let doce = 0;
+  let dosCuatro = 0;
+  let tresSeis = 0;
+  let porcentaje = 40000;
   btnEvaluar.addEventListener("click", (event) => {
     event.preventDefault();
     if (Fn.validaRut(txt_rut.value)) {
@@ -108,7 +113,9 @@ export default () => {
           apellido1.value = datos[i].lastName1;
           apellido2.value = datos[i].lastName2;
           fecha.value = datos[i].dateBirth;
-
+              if(datos[i].sueldoPromedio<=536000){
+                  maxAmount = maxAmount * porcentaje;
+              }
         }else{
           i++;
           a++;
