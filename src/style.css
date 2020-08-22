@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500');
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  width: 48%;
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.item:nth-child(3n) {
+  width: 100%;
+}
