@@ -61,7 +61,7 @@ export default () => {
                 <div class="col">
                   <label class="col-form-label">Monto a solicitar:</label>
                   <input id="txt_credit_valid" type="text" class="form-control">
-                  <small id="label_top_credit" class="form-text text-muted">Monto Máximo Otorgado: $ 6.000.000</small>
+                  <small id="label_top_credit" class="form-text text-muted"></small>
                 </div>
                 <div class="col">
                   <label class="col-form-label">Cantidad de cuotas:</label>
@@ -74,8 +74,8 @@ export default () => {
                 </div>
               </div>
             </form>
-            <button id='btn_sendInfo' type="button" class="btn btn-primary btn-lg mt-3">Ver Crédito</button>
-          </div>
+            <a href="#/aproved" class="btn btn-info button_class">Ver Crédito</a>
+            </div>
         </div>
     `;
   const divElement = document.createElement("div");
@@ -90,6 +90,8 @@ export default () => {
   const apellido1 = divElement.querySelector("#txt_lastname1_valid");
   const apellido2 = divElement.querySelector("#txt_lastname2_valid");
   const fecha = divElement.querySelector("#txt_date_valid");
+  const porcentajeFinal = divElement.querySelector("#label_top_credit");
+  console.log(porcentajeFinal);
   const datos = DB;
   formValid.style.display = "none";
   let a = 0;
@@ -98,7 +100,7 @@ export default () => {
   let doce = 0;
   let dosCuatro = 0;
   let tresSeis = 0;
-  let porcentaje = 40000;
+  let porcentaje = 400;
   btnEvaluar.addEventListener("click", (event) => {
     event.preventDefault();
     if (Fn.validaRut(txt_rut.value)) {
@@ -114,7 +116,13 @@ export default () => {
           apellido2.value = datos[i].lastName2;
           fecha.value = datos[i].dateBirth;
               if(datos[i].sueldoPromedio<=536000){
-                  maxAmount = maxAmount * porcentaje;
+                  maxAmount = (datos[i].sueldoPromedio * porcentaje)/100;
+                  let num = new Number(maxAmount).toLocaleString("es-CL");
+                  porcentajeFinal.textContent = `Monto Máximo Otorgado: ${num}`;
+              }else{
+                  maxAmount = (datos[i].sueldoPromedio * porcentaje)/100;
+                  let num = new Number(maxAmount).toLocaleString("es-CL");
+                  porcentajeFinal.textContent = `Monto Máximo Otorgado: ${num}`;
               }
         }else{
           i++;
