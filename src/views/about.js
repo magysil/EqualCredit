@@ -1,5 +1,8 @@
 export default () => {
-  const viewsAbout = `
+  const viewsAbout = /*html*/ `
+<div class='container'>
+
+
   <div class="row">
     <div class="col-sm about-text">
     <i class="fas fa-users" id="icono"></i>
@@ -64,7 +67,7 @@ export default () => {
 
 </div>
 
-
+</div>
 
     `;
   const divElement = document.createElement("div");

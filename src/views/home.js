@@ -1,5 +1,5 @@
 export default () => {
-  const viewsHome = `
+  const viewsHome = /*html*/ `
 
   
   <!-- <div class="container-banner">
